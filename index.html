@@ -10,8 +10,8 @@
 
 <frameset cols='150, *' onload='onloadFocus();'>
 	<frame src=Book/BookTitle.htm frameborder=0 scrolling=yes>
-	<frameset rows='90, *'>
-		<frame name=Chapter src=blank.htm frameborder=1>
+	<frameset rows='90, *' onload='loadFirstChapter();'>
+		<frame name=Chapter src=blank.htm frameborder=1 onload="javascript:doMyclick()">
 		<frame name=Verse src=blank.htm frameborder=0>
 	</frameset>
 </frameset>

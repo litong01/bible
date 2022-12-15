@@ -13,4 +13,5 @@ function loadFirstChapter()
 function doMyclick()
 {
     console.log("calling doMyclick")
+    document.getElementsByTagName("a")[0].click()
 }

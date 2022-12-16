@@ -11,7 +11,7 @@
 function doMyclick()
 {
     console.log("calling doMyclick")
-    const alltags = document.getElementsByTagName("a")
+    const alltags = document.getElementById("chapter").contentDocument.getElementsByTagName("a")
     if (alltags.length > 0) {
         alltags[0].click()
     }
@@ -23,7 +23,7 @@ function doMyclick()
 <frameset cols='150, *' onload='onloadFocus();'>
 	<frame src=Book/BookTitle.htm frameborder=0 scrolling=yes>
 	<frameset rows='90, *' onload='loadFirstChapter();'>
-		<frame name=Chapter src=blank.htm frameborder=1 onload="javascript:doMyclick()">
+		<frame id=chapter name=Chapter src=blank.htm frameborder=1 onload="javascript:doMyclick()">
 		<frame name=Verse src=blank.htm frameborder=0>
 	</frameset>
 </frameset>

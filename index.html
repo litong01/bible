@@ -11,7 +11,10 @@
 function doMyclick()
 {
     console.log("calling doMyclick")
-    document.getElementsByTagName("a")[0].click()
+    const alltags = document.getElementsByTagName("a")
+    if (alltags.length > 0) {
+        alltags[0].click()
+    }
 }
 
 </script>

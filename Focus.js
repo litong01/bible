@@ -10,7 +10,7 @@ function loadFirstChapter()
     console.log("did this")
 }
 
-function doMyclick()
+function doExMyclick()
 {
     console.log("calling doMyclick")
     document.getElementsByTagName("a")[0].click()

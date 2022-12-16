@@ -4,14 +4,19 @@
 <head>
 <meta http-equiv=Content-Type content='text/html; charset=UTF-8'>
 <title>Bible Book</title>
-
-<script language='JavaScript' src='Focus.js'></script>
 <script language='JavaScript'>
 
 function doMyclick()
 {
-    console.log("calling doMyclick")
     const alltags = document.getElementById("chapter").contentDocument.getElementsByTagName("a")
+    if (alltags.length > 0) {
+        alltags[0].click()
+    }
+}
+
+function onFirstLoad()
+{
+    const alltags = document.getElementById("titleFrame").contentDocument.getElementsByTagName("a")
     if (alltags.length > 0) {
         alltags[0].click()
     }
@@ -20,10 +25,10 @@ function doMyclick()
 </script>
 </head>
 
-<frameset cols='150, *' onload='onloadFocus();'>
-	<frame src=Book/BookTitle.htm frameborder=0 scrolling=yes>
+<frameset cols='150, *'>
+	<frame id="titleFrame" src=Book/BookTitle.htm frameborder=0 scrolling=yes onload="javascript:doFirstLoad()">
 	<frameset rows='90, *' onload='loadFirstChapter();'>
-		<frame id=chapter name=Chapter src=blank.htm frameborder=1 onload="javascript:doMyclick()">
+		<frame id="chapter" name=Chapter src=blank.htm frameborder=1 onload="javascript:doMyclick()">
 		<frame name=Verse src=blank.htm frameborder=0>
 	</frameset>
 </frameset>

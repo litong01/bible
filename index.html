@@ -6,7 +6,15 @@
 <title>Bible Book</title>
 
 <script language='JavaScript' src='Focus.js'></script>
+<script language='JavaScript'>
 
+function doMyclick()
+{
+    console.log("calling doMyclick")
+    document.getElementsByTagName("a")[0].click()
+}
+
+</script>
 </head>
 
 <frameset cols='150, *' onload='onloadFocus();'>
